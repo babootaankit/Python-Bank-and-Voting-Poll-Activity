@@ -2,7 +2,7 @@
 import os
 import csv
 
-budget_data_csv = os.path.join("02-Homework", "03-Python", "Instructions", "PyBank", "Resources", "budget_data.csv")
+budget_data_csv = os.path.join("Resources", "budget_data.csv")
 
 #declare variable and lists
 Line_count = 0
@@ -53,7 +53,7 @@ print("Greatest increase in profits:" + " " + str(dateof_greatest_increase) + " 
 print("Greatest decrease in profits:" + " " + str(dateof_greatest_decrease) + " " + "$" + str(greatest_decrease))
 
 
-with open('budget_data.txt', 'w') as text:
+with open('Analysis/budget_data.txt', 'w') as text:
     text.write("Financial Analysis"+ "\n")
     text.write("--------------------------------------------------\n\n")
     text.write("Total Months:" + " " + str(Line_count) + "\n")
