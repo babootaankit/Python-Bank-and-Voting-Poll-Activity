@@ -1,8 +1,10 @@
+#import modules
 import os
 import csv
 
 budget_data_csv = os.path.join("02-Homework", "03-Python", "Instructions", "PyBank", "Resources", "budget_data.csv")
 
+#declare variable and lists
 Line_count = 0
 Net_total = 0
 Average = 0
@@ -13,12 +15,7 @@ Net_Change_List = []
 Months_change = []
 Change_date = []
 
-    
-
-    #create teh variable for Prev_Int
-
-    #empty variable : var cat = []
-    #variable equating to 0 (which is a value) : var cat = 0 
+#open csv  
 with open(budget_data_csv) as csvfile:
         csv_reader = csv.reader(csvfile, delimiter=',')
         csv_header = next(csv_reader)
@@ -26,20 +23,19 @@ with open(budget_data_csv) as csvfile:
 
 
         for row in csv_reader:    
-                
+            #count number of months    
             Line_count = Line_count + 1
             Net_total = Net_total + int(row[1])
             #track the net change
             basic_net_change = int(row[1])- Previous_net
             Previous_net = int(row[1])
-            #here you are giving net_change a new value of subtract previous net with current net
+            #Find average change
             Net_Change_List.append(basic_net_change)
             Months_change += row[1]
-            #This line make the previous_net value equae to the second index
             
             Average = sum(Net_Change_List)/len(Net_Change_List)
             
-        
+            #find greateast increase and decrease
             greatest_increase = max(Net_Change_List)
             greatest_decrease = min(Net_Change_List)
 
