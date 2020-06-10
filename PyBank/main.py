@@ -54,7 +54,7 @@ print("Greatest decrease in profits:" + " " + str(dateof_greatest_decrease) + " 
 
 
 with open('budget_data.txt', 'w') as text:
-    text.write("  Financial Analysis"+ "\n")
+    text.write("Financial Analysis"+ "\n")
     text.write("--------------------------------------------------\n\n")
     text.write("Total Months:" + " " + str(Line_count) + "\n")
     text.write("Total:" + "$" + str(Net_total) +"\n")
