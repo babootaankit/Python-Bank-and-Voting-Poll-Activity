@@ -50,7 +50,7 @@ print("-------------------------")
 
 
 
-with open('election_data.txt', 'w') as text:
+with open('Analsyis/election_data.txt', 'w') as text:
     text.write("Election Results\n")
     text.write("-------------------------\n")
     text.write("Total Votes:" + " " + str(Total_votes) + "\n")
